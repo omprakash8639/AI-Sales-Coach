@@ -5,7 +5,7 @@ from urllib.parse import urlparse, parse_qs
 import requests
 
 # Gemini API Key
-GEMINI_API_KEY = "AIzaSyCLDofGCx6BNMeMbrF0FiDTPJhzlUMSoBs"
+GEMINI_API_KEY = "YOUR_API_KEY"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 
 app = FastAPI()
