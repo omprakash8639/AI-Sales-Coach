@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Clock, TrendingUp, Star, ChevronRight, Target, DollarSign, Users, Award, BarChart3, Briefcase, Trophy, Zap, FileText, Globe, ChevronDown } from 'lucide-react';
 import YouTube from 'react-youtube';
+import './App.css'; // Ensure you have a CSS file for custom styles
 
 const fetchVideoSummary = async (videoUrl, selectedLanguage, setLoading, setSummary) => {
   try {
     setLoading(true);
-
     const response = await fetch("http://localhost:8000/summarize/", {
       method: "POST",
       headers: {
@@ -29,13 +29,12 @@ const fetchVideoSummary = async (videoUrl, selectedLanguage, setLoading, setSumm
   }
 };
 
-
 const FintechSalesTutorialHub = () => {
   const [selectedVideo, setSelectedVideo] = useState({
     id: 1,
-    title: "Credit Card Vs Debit Card",
-    videoUrl: "zTn0EO3dzjs",
-    duration: "18:45",
+    title: "The Best SALES TRAINING On The Internet",
+    videoUrl: "NcD2t9qt-fM",
+    duration: "57:23",
     completions: "847",
     rating: 4.9,
     roi: "+32%"
@@ -69,11 +68,11 @@ const FintechSalesTutorialHub = () => {
   const tutorials = [
     {
       id: 1,
-      title: "Credit Card Vs Debit Card",
-      thumbnail: "https://img.youtube.com/vi/zTn0EO3dzjs/0.jpg",
+      title: "The Best SALES TRAINING On The Internet",
+      thumbnail: "https://img.youtube.com/vi/NcD2t9qt-fM/0.jpg",
       description: "Master sophisticated sales techniques specifically designed for fintech products and enterprise clients.",
-      videoUrl: "zTn0EO3dzjs",
-      duration: "18:45",
+      videoUrl: "NcD2t9qt-fM",
+      duration: "57:23",
       completions: "847",
       rating: 4.9,
       level: "Expert",
@@ -83,11 +82,11 @@ const FintechSalesTutorialHub = () => {
     },
     {
       id: 2,
-      title: "Advantages and Disadvantages of Credit Card",
-      thumbnail: "https://img.youtube.com/vi/3ApIk3wDHa4/0.jpg",
+      title: "Sales Training - Become Sales Superstar | The Top Sale Techniques",
+      thumbnail: "https://img.youtube.com/vi/EGI4RjqbL3Q/0.jpg",
       description: "Navigate complex financial regulations while maximizing sales opportunities and maintaining compliance.",
-      videoUrl: "3ApIk3wDHa4",
-      duration: "22:30",
+      videoUrl: "EGI4RjqbL3Q",
+      duration: "01:01:18",
       completions: "652",
       rating: 4.8,
       level: "Advanced",
@@ -96,11 +95,11 @@ const FintechSalesTutorialHub = () => {
     },
     {
       id: 3,
-      title: "Know Your Credit Card",
-      thumbnail: "https://img.youtube.com/vi/ihkggPfRkz0/0.jpg",
+      title: "57 Minutes of sales training that will explode your sales",
+      thumbnail: "https://img.youtube.com/vi/5O-sLe6iOns/0.jpg",
       description: "Proven methodologies for securing high-value enterprise contracts in the financial technology sector.",
-      videoUrl: "ihkggPfRkz0",
-      duration: "25:15",
+      videoUrl: "5O-sLe6iOns",
+      duration: "57:22",
       completions: "723",
       rating: 4.9,
       level: "Expert",
@@ -109,11 +108,11 @@ const FintechSalesTutorialHub = () => {
     },
     {
       id: 4,
-      title: "Various Charges on Your Credit Card",
-      thumbnail: "https://img.youtube.com/vi/8xGNDyw9FGs/0.jpg",
+      title: "Free Sales Masterclass in Hindi | 4 Best Sales Techniques For Beginners | Suresh Mansharamani",
+      thumbnail: "https://img.youtube.com/vi/FIyrvJxzY_Q/0.jpg",
       description: "Present complex fintech solutions with confidence using technical demonstrations that close deals.",
-      videoUrl: "8xGNDyw9FGs",
-      duration: "20:12",
+      videoUrl: "FIyrvJxzY_Q",
+      duration: "55:49",
       completions: "534",
       rating: 4.7,
       level: "Advanced",
@@ -122,11 +121,11 @@ const FintechSalesTutorialHub = () => {
     },
     {
       id: 5,
-      title: "Tips for Smart Use of Credit Card",
-      thumbnail: "https://img.youtube.com/vi/5AmZfRbBlqI/0.jpg",
+      title: "How to Sell More Than 99% Of People (3 HOUR MASTERCLASS)",
+      thumbnail: "https://img.youtube.com/vi/8ttzQ5eougI/0.jpg",
       description: "Turn risk concerns into competitive advantages when selling financial technology solutions.",
-      videoUrl: "5AmZfRbBlqI",
-      duration: "16:40",
+      videoUrl: "8ttzQ5eougI",
+      duration: "03:24:54",
       completions: "612",
       rating: 4.8,
       level: "Advanced",
@@ -161,8 +160,6 @@ const FintechSalesTutorialHub = () => {
   };
 
   const opts = {
-    height: '390',
-    width: '640',
     playerVars: {
       autoplay: 0,
     },
@@ -170,71 +167,13 @@ const FintechSalesTutorialHub = () => {
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #0F172A, #1E293B, #000000)' }}>
-      {/* Premium Header */}
-      <div style={{ position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1), rgba(16, 185, 129, 0.1))' }}></div>
-        <div style={{ position: 'relative', padding: '2rem' }}>
-          <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                <div style={{ position: 'relative' }}>
-                  <div style={{ width: '4rem', height: '4rem', background: 'linear-gradient(to right, #3B82F6, #A855F7, #10B981)', borderRadius: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)' }}>
-                    <Briefcase size={24} style={{ color: 'white' }} />
-                  </div>
-                  <div style={{ position: 'absolute', top: '-0.25rem', right: '-0.25rem', width: '1.25rem', height: '1.25rem', backgroundColor: '#10B981', borderRadius: '9999px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Zap size={10} style={{ color: 'white' }} />
-                  </div>
-                </div>
-                <div>
-                  <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', background: 'linear-gradient(to right, white, #D1D5DB)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', marginBottom: '0.25rem' }}>
-                    Sales Mastery Hub
-                  </h1>
-                  <p style={{ fontSize: '0.875rem', color: '#D1D5DB' }}>Elite training for financial technology sales professionals</p>
-                </div>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontSize: '1.125rem', fontWeight: 'bold', color: 'white' }}>Level 7</div>
-                  <div style={{ fontSize: '0.75rem', color: '#34D399' }}>Sales Expert</div>
-                </div>
-                <div style={{ width: '3rem', height: '3rem', background: 'linear-gradient(to right, #10B981, #14B8A6)', borderRadius: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Trophy size={18} style={{ color: 'white' }} />
-                </div>
-              </div>
-            </div>
-
-            {/* Performance Dashboard */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
-              {performanceMetrics.map((metric, index) => (
-                <div key={index} style={{ position: 'relative' }}>
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))', borderRadius: '0.75rem', filter: 'blur(8px)', opacity: 0 }} className="group-hover:opacity-100"></div>
-                  <div style={{ position: 'relative', backgroundColor: 'rgba(30, 41, 59, 0.5)', backdropFilter: 'blur(16px)', borderRadius: '0.75rem', padding: '1rem', border: '1px solid rgba(51, 65, 85, 0.5)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                      <div style={{ width: '2rem', height: '2rem', background: 'linear-gradient(to right, #3B82F6, #A855F7)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <metric.icon size={16} style={{ color: 'white' }} />
-                      </div>
-                      <div style={{ color: '#34D399', fontSize: '0.75rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                        <TrendingUp size={10} />
-                        {metric.trend}
-                      </div>
-                    </div>
-                    <div style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'white', marginBottom: '0.25rem' }}>{metric.value}</div>
-                    <div style={{ color: '#94A3B8', fontSize: '0.75rem' }}>{metric.label}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '0 2rem 3rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
           {/* Main Video Player */}
           <div>
             <div style={{ backgroundColor: 'rgba(30, 41, 59, 0.3)', backdropFilter: 'blur(16px)', borderRadius: '1.5rem', padding: '2rem', border: '1px solid rgba(51, 65, 85, 0.3)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}>
               <div style={{ position: 'relative', marginBottom: '2rem' }}>
-                <div style={{ aspectRatio: '16 / 9', backgroundColor: 'black', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)', border: '1px solid rgba(71, 85, 105, 0.2)' }}>
+                <div className="video-responsive">
                   <YouTube videoId={selectedVideo.videoUrl} opts={opts} />
                 </div>
                 <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', display: 'flex', gap: '0.75rem' }}>
